@@ -30,10 +30,14 @@ var employeesList = [
         salary: 4500
     }
 ];
+function alertFunction(row) {
+    window.alert(employeesList[row].firstName + ' ' + employeesList[row].lastName);
+   // window.alert(row);
+}
 function showList() {
-    var myTable = '<table border="1" class="table table-striped"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th></tr>';
+    var myTable = '<table border="1" class="table table-striped"><tr><th>First Name</th><th>Last Name</th><th>Phone</th><th>Salary</th><th>Show</th><th>Delete</th></tr>';
     for(var i in employeesList) {
-        myTable += '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+'</td><td>'+employeesList[i].salary+'</td></tr>';
+        myTable += '<tr><td>'+employeesList[i].firstName+'</td><td>'+employeesList[i].lastName+'</td><td>'+employeesList[i].phone+'</td><td>'+employeesList[i].salary+'</td><td><button onclick="alertFunction('+i+')">Vizualizare</button></td><td></td></tr>';
     }
     myTable += '</table>';
     var container = document.getElementById('listcontainer');
