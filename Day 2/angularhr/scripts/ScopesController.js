@@ -6,8 +6,10 @@ hrApp.controller('ScopesController',['$rootScope', '$scope', function($rootScope
     $scope.childtemplate = 'templates/childscope.html';
     $scope.resetFirstVariable = function() {
         $scope.firstVariable = undefined;
+        alert("varible reset");
     };
     $scope.setFirstVariable = function(val) {
         $scope.firstVariable = val;
+        alert("variable set");
     };
 }]);

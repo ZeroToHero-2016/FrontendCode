@@ -3,5 +3,4 @@
  */
 hrApp.controller('MainController',['$rootScope', '$scope', function($rootScope, $scope) {
     $scope.name="name";
-   // console.log($scope.name);
 }]);
