@@ -24,6 +24,14 @@
     </div>
     <div>
         <p>
+            Sort by: <input type="text" maxlength="1" onkeypress='return event.charCode >= 49 && event.charCode <= 52' id="option"/>
+            <button onclick="sort(); showList()">Sort</button>
+        </p>
+        <p>
+            Filter by: <input type="text" id="word"/>
+            <button onclick="filt(); showList()">Filter</button>
+        </p>
+        <p>
             First Name: <input type="text" id="firstName"/>
         </p>
         <p>
